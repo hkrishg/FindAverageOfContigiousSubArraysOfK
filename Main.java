@@ -2,6 +2,10 @@ import java.util.Arrays;
 
 class Main {
 
+  //Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
+      // Array: [1, 3, 2, 6, -1, 4, 1, 8, 2], K=5
+
+
   // Naive solution:
 
   // public static double[] findAverageOfSubArraysOfK(int k, int[] arr) {
@@ -28,12 +32,12 @@ class Main {
         windowSum -= arr[windowStart]; // subtract element going out
         windowStart++; // slide window ahead
       }
+    
     }
     return result;
   }
 
   public static void main(String[] args) {
-    // Array: [1, 3, 2, 6, -1, 4, 1, 8, 2], K=5
     double[] result = Main.findAverageOfSubArraysOfK(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
     System.out.println("----" + Arrays.toString(result));
   }
